@@ -31,7 +31,7 @@ def run():
                 'No Escopo': no_escopo
             }
             # Acréscimo do novo evento ao DataFrame
-            st.session_state.threat_data = st.session_state.threat_data.append(new_threat, ignore_index=True)
+            st.session_state.threat_data = st.session_state.threat_data.concat(new_threat, ignore_index=True)
 
     # Exibindo o DataFrame completo
     st.write("Inventário de Ameaças Registradas:")
