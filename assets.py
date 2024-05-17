@@ -42,7 +42,7 @@ def run():
                 'Ambiente Alvo': ambiente_alvo
             }
             # Acréscimo do novo asset ao DataFrame
-            st.session_state.data = st.session_state.data.append(new_asset, ignore_index=True)
+            st.session_state.data = st.session_state.data.concat(new_asset, ignore_index=True)
 
     # Exibindo o DataFrame completo
     st.write("Inventário de Assets Registrados:")
